@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Business Men Info</title>
+</head>
+<body>
+
+    <button onclick="showInfo('bm1')">Businessman 1</button>
+    <button onclick="showInfo('bm2')">Businessman 2</button>
+    <button onclick="showInfo('bm3')">Businessman 3</button>
+
+    <div id="infoDisplay" style="margin-top:20px; font-weight:bold;"></div>
+
+    <script>
+        function showInfo(id) {
+            const data = {
+                'bm1': 'Elon Musk: Tesla, SpaceX',
+                'bm2': 'Jeff Bezos: Amazon, Blue Origin',
+                'bm3': 'Bill Gates: Microsoft, Gates Foundation'
+            };
+            document.getElementById('infoDisplay').innerText = data[id];
+        }
+    </script>
+</body>
+</html>
