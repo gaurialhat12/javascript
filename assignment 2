@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .business-card { border: 1px solid #ccc; padding: 15px; margin: 10px; width: 300px; float: left; }
+  .info { display: none; margin-top: 10px; color: #555; }
+  .show { display: block; }
+  button { cursor: pointer; padding: 5px 10px; }
+</style>
+</head>
+<body>
+
+<!-- Business Man 1 -->
+<div class="business-card">
+  <h3>John Doe</h3>
+  <p>CEO, TechCorp</p>
+  <button onclick="toggleInfo('info1')">View Info</button>
+  <div id="info1" class="info">Expert in AI & Machine Learning. 10+ years experience.</div>
+</div>
+
+<!-- Business Man 2 -->
+<div class="business-card">
+  <h3>Jane Smith</h3>
+  <p>CFO, FinSolutions</p>
+  <button onclick="toggleInfo('info2')">View Info</button>
+  <div id="info2" class="info">Specializes in corporate restructuring and auditing.</div>
+</div>
+
+<!-- Business Man 3 -->
+<div class="business-card">
+  <h3>Mike Ross</h3>
+  <p>Marketing Director</p>
+  <button onclick="toggleInfo('info3')">View Info</button>
+  <div id="info3" class="info">Expert in digital marketing and brand strategy.</div>
+</div>
+
+<script>
+function toggleInfo(id) {
+  var element = document.getElementById(id);
+  // Toggle the 'show' class to hide/reveal info [11]
+  element.classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
