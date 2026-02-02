@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Indian Businessmen Info</title>
+<style>
+    body { font-family: sans-serif; padding: 20px; }
+    button { padding: 10px; margin: 5px; cursor: pointer; }
+    #info-display { margin-top: 20px; padding: 15px; border: 1px solid #ccc; width: 300px; display: none; }
+</style>
+</head>
+<body>
+
+<h3>Click to view Businessman Info:</h3>
+<button onclick="showInfo('ambani')">Mukesh Ambani</button>
+<button onclick="showInfo('tata')">Ratan Tata</button>
+<button onclick="showInfo('mahindra')">Anand Mahindra</button>
+
+<div id="info-display"></div>
+
+<script>
+    function showInfo(person) {
+        const display = document.getElementById('info-display');
+        display.style.display = 'block';
+        
+        const data = {
+            'ambani': '<strong>Mukesh Ambani</strong><br>Chairman, Reliance Industries Limited. Known for Jio telecom revolution.',
+            'tata': '<strong>Ratan Tata</strong><br>Chairman Emeritus, Tata Sons. Known for ethics and global acquisitions.',
+            'mahindra': '<strong>Anand Mahindra</strong><br>Chairman, Mahindra Group. Known for SUV leadership and social media presence.'
+        };
+        
+        display.innerHTML = data[person] || 'Information not found.';
+    }
+</script>
+
+</body>
+</html>
