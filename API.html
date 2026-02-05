@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY SELF</title>
+</head>
+<style>
+    body{
+        color: purple;
+        height: 90vh;
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(-45deg,rgb(247, 149, 247),white);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .main{
+        border: 1px solid purple;
+        border-radius: 40px 0px 40px 0px;
+        padding: 15px;
+        display: flex;
+        gap: 30px;
+        box-shadow: 0px 0px 10px 0px purple;
+    }
+    .main img{
+        border-radius: 100%;
+        height: 100px;
+        width: 100px;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="imgDiv" id="imgDiv">
+        </div>
+        <div class="infoDiv" id="infoDiv">
+            <h1 id="name"></h1>
+            <h3 id="age"></h3>
+            <span id="clgname"></span>
+            <p id="address"></p>
+        </div>
+    </div>
+</body>
+<script>
+    const getData= async ()=>{
+        const req= await fetch("https://fakestoreapi.com/products")
+        const res = await req.json()
+        console.log(res.map((item)=>item.image))
+        res.map((item)=>{
+            const elemcreateIMG=document.createElement("img")
+            const elemcreateH1=document.createElement("h1")
+            elemcreateIMG.src=item.image
+            elemcreateH1.innerHTML=item.title
+            const elemIMGdiv=document.getElementById("imgDiv")
+            elemIMGdiv.append(elemcreateIMG)
+            elemIMGdiv.append(elemcreateH1)
+        }    
+    )
+    }
+
+    getData()
+    
+    
+    
+
+</script>
+</html>
