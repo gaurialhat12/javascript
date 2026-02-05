@@ -9,11 +9,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: gray;
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 pink;
     max-width: 300px;
     margin: auto;
     text-align: center;
@@ -36,7 +36,7 @@ button {
     display: inline-block;
     padding: 8px;
     color: white;
-    background-color: #000;
+    background-color: black;
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -64,12 +64,13 @@ button:hover {
 </head>
 <body>
     <div class="card">
-        <img src="https://via.placeholder.com" alt="Profile Picture" id="profile-pic">
+        <img src="image copy 4.png" alt="Profile Picture" id="profile-pic">
         <div class="container">
-            <h1 id="user-name">Your Name</h1>
-            <p class="title" id="user-title">Job Title / Role</p>
-            <p id="user-bio">A brief description of yourself and what you do.</p>
-            <p id="user-email">your.email@example.com</p>
+            <h1 id="name">GAURI ALHAT</h1>
+            <p class="" id="collage name"> NUTAN COLLAGE</p>
+            <p id="AGE"> 21</p>
+            <p id="email">gaurialhat15@gmail.com</p>
+            
             <button class="button" onclick="changeBio()">Change Bio</button>
         </div>
     </div>
@@ -82,8 +83,6 @@ function changeBio() {
     if (bioElement.textContent === 'A brief description of yourself and what you do.') {
         bioElement.textContent = 'I am a web developer with a passion for front-end design and interactive websites!';
     } else {
-        bioElement.textContent = 'A brief description of yourself and what you do.';
-    }
-}
+        bioElement.textContent = 'A brief des
 
 </html>
