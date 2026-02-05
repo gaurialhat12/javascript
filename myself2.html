@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: gray;
+    background-color: pink;
 }
 
 .card {
@@ -26,7 +26,7 @@ body {
 }
 
 .title {
-    color: grey;
+    color:  pink;
     font-size: 18px;
 }
 
@@ -67,22 +67,15 @@ button:hover {
         <img src="image copy 4.png" alt="Profile Picture" id="profile-pic">
         <div class="container">
             <h1 id="name">GAURI ALHAT</h1>
-            <p class="" id="collage name"> NUTAN COLLAGE</p>
+            <p class="" id="college name"> NUTAN COLLEGE</p>
             <p id="AGE"> 21</p>
             <p id="email">gaurialhat15@gmail.com</p>
+            <p id="hobbies"></p>
             
-            <button class="button" onclick="changeBio()">Change Bio</button>
+            
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
-function changeBio() {
-    const bioElement = document.getElementById('user-bio');
-    // Check current bio and switch to another one
-    if (bioElement.textContent === 'A brief description of yourself and what you do.') {
-        bioElement.textContent = 'I am a web developer with a passion for front-end design and interactive websites!';
-    } else {
-        bioElement.textContent = 'A brief des
+
 
 </html>
