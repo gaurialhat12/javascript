@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container {
+    padding: 16px;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+#profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 16px;
+}
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <img src="https://via.placeholder.com" alt="Profile Picture" id="profile-pic">
+        <div class="container">
+            <h1 id="user-name">Your Name</h1>
+            <p class="title" id="user-title">Job Title / Role</p>
+            <p id="user-bio">A brief description of yourself and what you do.</p>
+            <p id="user-email">your.email@example.com</p>
+            <button class="button" onclick="changeBio()">Change Bio</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+function changeBio() {
+    const bioElement = document.getElementById('user-bio');
+    // Check current bio and switch to another one
+    if (bioElement.textContent === 'A brief description of yourself and what you do.') {
+        bioElement.textContent = 'I am a web developer with a passion for front-end design and interactive websites!';
+    } else {
+        bioElement.textContent = 'A brief description of yourself and what you do.';
+    }
+}
+
+</html>
