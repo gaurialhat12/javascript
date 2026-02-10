@@ -1,0 +1,14 @@
+function checkVotingEligibility() {
+    // 1. Get the input value
+    let age = document.getElementById("ageInput").value;
+    let resultElement = document.getElementById("result");
+
+    // 2. Perform the if-else check [3, 7]
+    if (age >= 18) {
+        resultElement.innerHTML = "You are eligible to vote!";
+        resultElement.style.color = "green";
+    } else {
+        resultElement.innerHTML = "You are not eligible to vote yet.";
+        resultElement.style.color = "red";
+    }
+}
