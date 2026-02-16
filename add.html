@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+</head>
+<style>
+
+</style>
+<body>
+    <div class="main" id="main">
+        <div class="card" id="card">
+            <div>
+                <label>Number 1</label>
+                <input type="number" placeholder="Enter number" name="" id="num1">
+            </div>
+            <div>
+                <label>Number 2</label>
+                <input type="number" placeholder="Enter number" name="" id="num2">
+            </div>
+            <div>
+                <button onclick="Add()">Add</button>
+            </div>
+            <div id="res"></div>
+        </div>
+    </div>
+</body>
+<script>
+    function Add(){
+        const elemNum1=document.getElementById("num1").value
+        const elemNum2=document.getElementById("num2").value
+        const elemRES=document.getElementById("res")
+        elemRES.innerText="Addition = "+(parseInt(elemNum1)+parseInt(elemNum2))
+    }
+
+</script>
+</html>
